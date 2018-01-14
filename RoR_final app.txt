@@ -1,0 +1,102 @@
+Technical Requirement:
+
+    Sử dụng Bootstrap
+    Cài đặt và sử dụng gem để tự review code/fix:
+      - https://github.com/bbatsov/rubocop
+      - https://github.com/flyerhzm/rails_best_practices
+
+    Follow performance, best practice rules
+
+    Có pagination (phân trang)
+
+    Dùng paperclip để chỉnh style image, hiện all thì dùng dạng thumbnail, hiện detail ảnh thì hiện dạng large
+
+    Có unit test (ít nhất ở model)
+    
+
+Requirement: Website quản lý ảnh
+
+    Cho phép người dùng bình thường:
+
+        Up từng bức ảnh 
+
+        Up ảnh theo album
+
+        Cho phép user add title, description vào ảnh
+
+        Cho phép edit title, description của album
+
+        Cho phép người dùng private/public album/ảnh
+
+        Cho phép người dùng xoá album, ảnh 
+
+        Cho phép người dùng xem ảnh (như dashboard, các ảnh đã publish của mình và mọi người)
+
+        Cho phép người dùng xem ảnh của mình (private dashboard)
+
+        Cho phép admin Xem tất cả các ảnh / edit ảnh/ xoá ảnh ....
+
+        Cho phép admin disable/active/delete user khi cần
+
+Advance technique (optional)
+
+    Cho phép user like album, picture (Estimate: )
+
+    Cho phép user follow album, user khác (Estimate: )
+
+    Có notification khi follow album, user có hoạt động gì (xoá ảnh, thêm ảnh, sửa album ...) (Estimate: )
+
+
+Các tiêu chuẩn về code cần áp dụng và ghi nhớ:
+
+    1/ Don’t use inline javascript. Use Javascript Object pattern for managing Javascript code.
+
+    2/ Don’t hard code for text and path/url. Must use I18n and UrlHepler (JS-Route at client side).
+
+    3/ Don’t rescue Exception.
+
+    4/ Shouldn’t have N+1 query issue.
+
+    5/ Don’t use instance variable (@) in partial view.
+
+    6/ Don’t use inline style, internal css.
+
+    7/ Use respond_to do |format| (in controller) when we really need. Don’t use wrong way.
+
+    8/ Don’t create empty action in controller.
+
+    9/ Do not declare method option for link_to if the method is ‘get’.
+
+    10/ When using cancancan: load/authorize resource automatically, dont do that manually.
+
+    11/ The description of Unit Test example should be clean and meaningful. Don’t write descriptions like: “should work”, “should not work”.
+
+    12/ Never update a migration which has been pushed
+
+    13/ When using I18n-js: only put the translations which we need to use in JS to JS translation file
+
+    14/ Do not declare method option for form_tag if the method is post.
+
+    15/ The view contains many logic code, we should never do this, view logic should be in helpers
+
+    16/ Do not commit the files which do not use for application in staging/production, or configuration files without approval
+
+    17/ Must follow RESTful for resource
+
+    18/ I18n was not used. This is bad because it will be hard if we want to have multi-language feature in the future; using I18n also helps us manage texts better too
+
+    19/ Do not use string concatation in coffee script, use interpolation instead
+
+    20/ Need to follow naming convention
+
+    21/ In javascript do not compare .length > 0, a == true|false, a == ''
+
+
+
+
+
+Database: postgres
+Rails: rails last
+ruby: ruby last
+
+
