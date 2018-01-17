@@ -22,7 +22,7 @@ Requirement: Website quản lý ảnh
 
         Up ảnh theo album
 
-        Cho phép user add title, description vào ảnh
+        Cho phép USER add title, description vào ảnh
 
         Cho phép edit title, description của album
 
@@ -40,7 +40,7 @@ Requirement: Website quản lý ảnh
 
 Advance technique (optional)
 
-    Cho phép user like album, picture (Estimate: )
+    Cho phép user like ALBUM, PICTURE (Estimate: )
 
     Cho phép user follow album, user khác (Estimate: )
 
