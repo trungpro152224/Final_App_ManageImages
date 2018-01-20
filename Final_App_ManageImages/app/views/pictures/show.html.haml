@@ -1,0 +1,6 @@
+%h1 = @picture.tilte 
+%p = @picture.description
+
+=link_to "All Pictures" pictures_path
+=link_to "Edit Pictures" edit_pictures_path(@picture)
+=link_to "Delete Pcitures" pictures_path(@picture), method: :delete, data: {confirm: "Are you sure deleted?"}
