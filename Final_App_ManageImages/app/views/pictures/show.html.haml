@@ -1,7 +1,14 @@
-%h1 Detail picture 
-%h2=@picture.title 
-%p=@picture.description
+.wrapper_with_padding
+	#note_show
 
-= link_to "All Pictures", pictures_path
-= link_to "Edit Pictures", edit_picture_path(@picture)
-=link_to "Delete Pcitures", picture_path(@picture), method: :delete, data: {confirm: "Are you sure deleted?"}
+	%%h1 DETAIL PICTURE
+	<br>
+
+	%h2.title=@picture.title 
+	%p= simple_format(@picture.description)
+	<br>
+	
+	.buttons
+		= link_to "All Pictures", pictures_path, class: "button"
+		= link_to "Edit Pictures", edit_picture_path(@picture), class: "button"
+		=link_to "Delete Pcitures", picture_path(@picture), method: :delete, data: {confirm: "Are you sure deleted?"}, class: "button"
