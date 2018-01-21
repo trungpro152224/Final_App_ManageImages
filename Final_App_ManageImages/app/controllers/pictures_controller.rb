@@ -2,11 +2,12 @@ class PicturesController < ApplicationController
 
 	before_action :find_picture, only: [:show, :edit, :update, :destroy]
 	#index	
+	
 	def index 
-		@picture = Picture.all.order("create_at DESC")
-
+		@pictures = Picture.all.order("created_at DESC")
 
 	end
+
 
 	#show
 	def show 
@@ -16,18 +17,19 @@ class PicturesController < ApplicationController
 
 	#new 
 	def new
-		@picture = Picture.new
+		@picture = current_user.pictures.build
 	end 
 
 
 	#create
 	def create
-		@picture = Picture.new(picture_params)
+		@picture = current_user.pictures.build(picture_params)
 
 		if @picture.save
 			redirect_to @picture
 		else
 			render 'new'
+		end
 	end
 
 	#edit 
@@ -41,7 +43,8 @@ class PicturesController < ApplicationController
 			redirect_to @picture
 		else
 			render 'edit'
-	end 
+		end 
+	end
 	
 	#destroy
 	def destroy

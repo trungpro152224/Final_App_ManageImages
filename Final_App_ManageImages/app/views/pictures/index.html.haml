@@ -1,6 +1,6 @@
-- @picture.each do |picture|
-%h2 = link_to picture.tilte, picture
-/ %h2 = picture.description
-%p = time_ago_in_words(note.created_at)
+- @pictures.each do |picture| 
+	%h2= link_to picture.description, picture
+	%p= time_ago_in_words(picture.created_at)
 
-=link_to "New picture", new_picture_path
+	=link_to "New picture", new_picture_path
+	
