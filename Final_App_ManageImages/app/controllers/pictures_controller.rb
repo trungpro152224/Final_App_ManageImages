@@ -4,7 +4,7 @@ class PicturesController < ApplicationController
 	#index	
 
 	def index 
-		@pictures = Picture.where(user_id: current_user)
+		@pictures = Picture.where(user_id: current_user).order("created_at DESC").paginate(page: params[:page], per_page: 6)
 
 	end
 
@@ -60,7 +60,7 @@ class PicturesController < ApplicationController
 	end
 
 	def picture_params
-		params.require(:picture).permit(:title, :description)
+		params.require(:picture).permit(:title, :description, :image)
 	end
 
 end

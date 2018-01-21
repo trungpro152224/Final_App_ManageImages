@@ -1,11 +1,11 @@
 .wrapper_with_padding
 	#note_show
-
-	%%h1 DETAIL PICTURE
+	%h1 DETAIL PICTURE
 	<br>
-
+	= image_tag @picture.image.url(:large) 
 	%h2.title=@picture.title 
 	%p= simple_format(@picture.description)
+	
 	<br>
 	
 	.buttons
