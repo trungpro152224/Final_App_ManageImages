@@ -2,9 +2,9 @@ class PicturesController < ApplicationController
 
 	before_action :find_picture, only: [:show, :edit, :update, :destroy]
 	#index	
-	
+
 	def index 
-		@pictures = Picture.all.order("created_at DESC")
+		@pictures = Picture.where(user_id: current_user)
 
 	end
 
