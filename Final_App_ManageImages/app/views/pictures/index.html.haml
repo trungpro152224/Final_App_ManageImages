@@ -7,19 +7,16 @@
 / = link_to "New picture", new_picture_path
 		
 
-.wrapper_with_padding
-	#notes.clearfix
-		- unless @pictures.blank?
-			- @pictures.each do |picture|
-				%a{ href: (url_for [picture])}
-					.note
-						%h4.title= link_to picture.title, picture
-						%h3.date= time_ago_in_words(picture.created_at)
-						= link_to image_tag picture.image.url(:thumb)
-		- else
-			%h2 Add a picture
-			%p It appears you haven't created any picture yet... Lets fix that. Why don't you go ahead and create a new picture.
-			%button= link_to "New Picture", new_picture_path
+.padding
+	- unless @pictures.blank?
+		- @pictures.each do |picture|
+			%a{ href: (url_for [picture])}
+				%h4.title= link_to picture.title, picture
+				%h5.date= time_ago_in_words(picture.created_at)
+				= link_to image_tag picture.image.url(:thumb)
+	- else
+		%h2 Add a picture
+		%button= link_to "New Picture", new_picture_path
 
-	=will_paginate @picture, renderer: BootstrapPagination::Rails, inner_window: 0, outer_window: 0
+= will_paginate @picture, renderer: BootstrapPagination::Rails
 	
