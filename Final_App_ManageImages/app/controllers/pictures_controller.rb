@@ -1,29 +1,29 @@
 class PicturesController < ApplicationController
-
+	before_action :authenticate_user!
 	before_action :find_picture, only: [:show, :edit, :update, :destroy]
 	#index	
 
 	def index 
-		@pictures = Picture.where(user_id: current_user).order("created_at DESC").paginate(page: params[:page], per_page: 6)
 
+		@pictures = Picture.all.order("created_at DESC").paginate(page: params[:page], per_page: 6)
+	
 	end
-
 
 	#show
 	def show 
 
 	end 
 
-
 	#new 
 	def new
-		@picture = current_user.pictures.build
+		@picture = Picture.new
+
 	end 
 
 
 	#create
 	def create
-		@picture = current_user.pictures.build(picture_params)
+		@picture = Picture.new(picture_params)
 
 		if @picture.save
 			redirect_to @picture
@@ -44,13 +44,13 @@ class PicturesController < ApplicationController
 		else
 			render 'edit'
 		end 
-	end
+	end 
 	
-	#destroy
+	# destroy
 	def destroy
 		@picture.destroy
 		redirect_to pictures_path
-	end 
+	end
 
 
 	private

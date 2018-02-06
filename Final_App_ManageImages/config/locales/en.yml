@@ -31,3 +31,21 @@
 
 en:
   hello: "Hello world"
+  all_picture: "All Pictures"
+  new_picture: "New Picture"
+  sign_out: "Sign Out"
+  edit_picture: "Edit Picture"
+  delete_picture: "Delete Picture"
+  confirm_destroy: "Are you sure deleted?"
+  name_app: "Manage Images | Final App"
+  title: "Title"
+  image: "Image"
+  description: "Description"
+  submit: "Submit"
+  cancel: "Cancel"
+  login: "Login" 
+  email: "email"
+  detail_picture: "Detail Picture"
+
+
+

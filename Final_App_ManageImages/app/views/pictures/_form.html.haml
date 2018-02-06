@@ -1,7 +1,15 @@
-= simple_form_for @picture, html: { multipart: true } do |f| 
-  / = f.file :Choose file 
-  = f.label :image
+
+= form_for(@picture, html: {multipart: true}) do |f|
+  
+  = f.label I18n.t('image')
   = f.file_field :image
-  = f.input :title 
-  = f.input :description 
-  = f.button :submit, class: "button"
+  <br>
+  
+  = f.label I18n.t('title')
+  = f.text_field :title
+  <br>
+  = f.label I18n.t('description')
+  = f.text_area :description
+  <br>
+  = f.submit I18n.t('submit') , class: "btn btn-info" 
+ 

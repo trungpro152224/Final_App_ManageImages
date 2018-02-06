@@ -4,9 +4,8 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
 
   def after_sign_in_path_for(resource)
-    super resource
+    pictures_path
   end
-  def after_existing_sign_in_path_for(resource)
-  dashboard_path
-end
+
+
 end
