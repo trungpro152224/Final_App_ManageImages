@@ -8,6 +8,6 @@
 <br>
 	
 .buttons
-	= link_to "All Pictures", pictures_path
-	= link_to "Edit Picture", edit_picture_path(@picture)
-	=link_to "Delete Picture", picture_path(@picture), method: :delete, data: {confirm: "Are you sure deleted?"}
+	= link_to I18n.t('all_picture'), pictures_path
+	= link_to I18n.t('edit_picture'), edit_picture_path(@picture)
+	= link_to I18n.t('delete_picture'), picture_path(@picture), method: :delete, data: {confirm: "Are you sure deleted?"}

@@ -12,12 +12,12 @@
   - if user_signed_in?
     %i.glyphicon.glyphicon-camera
     %strong= current_user.email
-    = link_to "Sign Out", destroy_user_session_path, method: :delete, class: "navbar-text navbar-right"
-    = link_to "New Picture", new_picture_path, class: "navbar-text navbar-right"
-    = link_to "All Picture" ,pictures_path, class: "navbar-text navbar-right"
+    = link_to I18n.t('sign_out'), destroy_user_session_path, method: :delete, class: "navbar-text navbar-right"
+    = link_to I18n.t('new_picture'), new_picture_path, class: "navbar-text navbar-right"
+    = link_to I18n.t('all_picture') ,pictures_path, class: "navbar-text navbar-right"
     
   - else
-    = link_to "Log In", new_user_session_path
+    = link_to I18n.t('login'), new_user_session_path
   %p.notice= notice
   %p.alert= alert
   = yield

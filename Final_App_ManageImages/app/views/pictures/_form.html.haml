@@ -1,15 +1,15 @@
 
 = form_for(@picture, html: {multipart: true}) do |f|
   
-  = f.label :image
+  = f.label I18n.t('image')
   = f.file_field :image
   <br>
   
-  = f.label :title
+  = f.label I18n.t('title')
   = f.text_field :title
   <br>
-  = f.label :description
+  = f.label I18n.t('description')
   = f.text_area :description
   <br>
-  = f.button :submit, class: "btn btn-info"
+  = f.submit I18n.t('submit') , class: "btn btn-info" 
  
