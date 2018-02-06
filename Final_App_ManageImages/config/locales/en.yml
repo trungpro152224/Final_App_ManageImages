@@ -31,17 +31,27 @@
 
 en:
   hello: "Hello world"
+  pictures: 
+    show: 
+      all_picture: "All Pictures"
+      edit_picture: "Edit Picture"
+      delete_picture: "Delete Picture"
+
   all_picture: "All Pictures"
-  new_picture: "New Picture"
+  
+  pictures: 
+    index:
+      new_picture: "New Picture"
+
   sign_out: "Sign Out"
-  edit_picture: "Edit Picture"
-  delete_picture: "Delete Picture"
   confirm_destroy: "Are you sure deleted?"
   name_app: "Manage Images | Final App"
+  new_picture: "New Picture"
   title: "Title"
   image: "Image"
   description: "Description"
   submit: "Submit"
+
   cancel: "Cancel"
   login: "Login" 
   email: "email"
