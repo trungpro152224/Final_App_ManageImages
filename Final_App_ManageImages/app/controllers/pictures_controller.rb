@@ -4,8 +4,9 @@ class PicturesController < ApplicationController
 	#index	
 
 	def index 
-		@pictures = Picture.all.order("created_at DESC").paginate(page: params[:page], per_page: 6)
 
+		@pictures = Picture.all.order("created_at DESC").paginate(page: params[:page], per_page: 6)
+	
 	end
 
 	#show
@@ -16,6 +17,7 @@ class PicturesController < ApplicationController
 	#new 
 	def new
 		@picture = Picture.new
+
 	end 
 
 
@@ -49,6 +51,7 @@ class PicturesController < ApplicationController
 		@picture.destroy
 		redirect_to pictures_path
 	end
+
 
 	private
 

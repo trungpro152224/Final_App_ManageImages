@@ -6,8 +6,6 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     pictures_path
   end
-#   def after_existing_sign_in_path_for(resource)
-#   dashboard_path
-# end
+
 
 end
