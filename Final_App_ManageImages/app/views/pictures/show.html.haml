@@ -1,13 +1,13 @@
+.center
+	%h1 DETAIL PICTURE
+	<br>
+	= image_tag @picture.image.url(:large) 
+	%h2.title=@picture.title 
+	%p.description= @picture.description
 
-%h1 DETAIL PICTURE
 <br>
-= image_tag @picture.image.url(:large) 
-%h2.title=@picture.title 
-%p.description= @picture.description
-	
-<br>
-	
+
 .buttons
-	= link_to (t'.all_picture'), pictures_path
-	= link_to (t'.edit_picture'), edit_picture_path(@picture)
-	= link_to (t'.delete_picture'), picture_path(@picture), method: :delete, data: {confirm: "Are you sure deleted?"}
+	= link_to (t'.all_picture'), pictures_path, class: "btn btn-info"
+	= link_to (t'.edit_picture'), edit_picture_path(@picture), class: "btn btn-info"
+	= link_to (t'.delete_picture'), picture_path(@picture), method: :delete, data: {confirm: "Are you sure deleted?"}, class: "btn btn-info"

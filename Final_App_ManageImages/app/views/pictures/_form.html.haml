@@ -6,10 +6,11 @@
   <br>
   
   = f.label I18n.t('title')
-  = f.text_field :title
+  = f.text_field :title, class: "form-control"
   <br>
+
   = f.label I18n.t('description')
-  = f.text_area :description
+  = f.text_area :description, class: "form-control"
   <br>
   = f.submit I18n.t('submit') , class: "btn btn-info" 
  

@@ -1,3 +1,62 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+.wrapper_with_padding
+{
+	margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    text-align: left;
+
+
+}
+
+.padding
+{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    float: center;
+    text-align: center;
+}
+
+.wrapper
+{
+	
+	 text-align: left;
+	 margin-left: 100px;
+	 margin-right: 100px;
+}
+
+h1 { color: red; }
+
+i{ font-size:48px; }
+
+
+strong
+{ 
+	text-align: center;
+    color: blue;
+}
+
+.center
+{
+	text-align: center;
+}
+.buttons
+{
+	text-align: center;
+}
+
+.will-page
+{
+	text-align: center;
+}
+
+h2 
+{
+	color: red;
+}

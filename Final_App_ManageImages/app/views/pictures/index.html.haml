@@ -1,6 +1,6 @@
 
 
-= image_tag("callout_background.jpg", :alt => "rss feed") 
+= image_tag("callout_background.jpg", :alt => "rss feed")
 
 .padding
 	- unless @pictures.blank?
@@ -13,5 +13,6 @@
 		%h2 Add a picture
 		%button= link_to (t '.new_picture'), new_picture_path
 
-= will_paginate @picture, renderer: BootstrapPagination::Rails
+.will-page
+	= will_paginate @picture, renderer: BootstrapPagination::Rails
 	
