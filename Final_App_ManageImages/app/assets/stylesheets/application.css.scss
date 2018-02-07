@@ -2,6 +2,7 @@
 @import "bootstrap";
 
 
+
 .wrapper_with_padding
 {
 	margin-top: 100px;
@@ -12,6 +13,14 @@
 
 
 }
+.img{
+    
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 .padding
 {
@@ -20,12 +29,15 @@
     margin-right: 150px;
     margin-left: 80px;
     float: center;
+    width: 40%;
+    margin: auto;
     text-align: center;
+    border-style: ridge;
+    border-radius: 5px;
 }
 
 .wrapper
 {
-	
 	 text-align: left;
 	 margin-left: 100px;
 	 margin-right: 100px;
@@ -44,8 +56,19 @@ strong
 
 .center
 {
-	text-align: center;
+    text-align: left;
+     margin-left: 100px;
+     margin-right: 100px;
 }
+
+.center-detail
+{
+    text-align: center;
+     margin-left: 100px;
+     margin-right: 100px;
+}
+
+
 .buttons
 {
 	text-align: center;
@@ -59,4 +82,30 @@ strong
 h2 
 {
 	color: red;
+
+}
+
+.form-new-album
+{
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+.detail-album
+{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.listing-album
+{
+    margin-left: 100px;
+    margin-right: 100px;
+    border: 12px;
+}
+
+.edit-album
+{
+    margin-left: 100px;
+    margin-right: 100px;
 }

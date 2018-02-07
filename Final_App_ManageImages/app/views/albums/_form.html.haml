@@ -1,0 +1,16 @@
+
+
+= form_for(@album, html: {multipart: true}) do |f|
+	= f.label I18n.t('name abums')
+	= f.text_area :name, class: "form-control"
+	<br>
+
+	= f.label I18n.t('description')
+	= f.text_area :description, class: "form-control"
+	<br>
+
+	= f.check_box :is_private, {}, true, false
+	= f.label I18n.t('private album')
+	<br>
+	<br>
+	= f.submit I18n.t('submit') , class: "btn btn-info"

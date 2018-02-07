@@ -1,4 +1,4 @@
-.center
+.center-detail
 	%h1 DETAIL PICTURE
 	<br>
 	= image_tag @picture.image.url(:large) 
@@ -6,7 +6,6 @@
 	%p.description= @picture.description
 
 <br>
-
 .buttons
 	= link_to (t'.all_picture'), pictures_path, class: "btn btn-info"
 	= link_to (t'.edit_picture'), edit_picture_path(@picture), class: "btn btn-info"

@@ -1,0 +1,26 @@
+.listing-album 
+  %h1 LISTING ALBUMS
+
+  %table
+    %thead
+      %tr
+        %th Name
+        %th Description
+        %th Is private
+        %th
+        %th
+        %thead
+
+    %tbody
+      - @albums.each do |album|
+        %tr
+          %td= album.name
+          %td= album.description
+          %td= album.is_private
+          %td= link_to 'Show', album, class: "btn btn-default"
+          %td= link_to 'Edit', edit_album_path(album), class: "btn btn-default"
+          %td= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"
+
+  %br
+
+  = link_to 'New Album', new_album_path, class: "btn btn-info"

@@ -57,5 +57,10 @@ en:
   email: "email"
   detail_picture: "Detail Picture"
 
-
+  layout:
+    application:
+      sign_out: "Sign Out"
+      new_picture: "New Picture"
+      all_picture: "All picture"
+      new_album: "New Album"
 

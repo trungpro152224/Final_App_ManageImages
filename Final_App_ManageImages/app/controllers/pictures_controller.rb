@@ -5,8 +5,13 @@ class PicturesController < ApplicationController
 
 	def index 
 
-		@pictures = Picture.all.order("created_at DESC").paginate(page: params[:page], per_page: 6)
-	
+		# if (is_priavte = true)
+
+		# @pictures = Picture.all.where(is_priavte: 'true').order("created_at DESC").paginate(page: params[:page], per_page: 6)
+
+		# else
+		 	@pictures = Picture.all.order("created_at DESC").paginate(page: params[:page], per_page: 6)
+		# end
 	end
 
 	#show
@@ -16,8 +21,7 @@ class PicturesController < ApplicationController
 
 	#new 
 	def new
-		@picture = Picture.new
-
+			@picture = Picture.new
 	end 
 
 
@@ -34,6 +38,7 @@ class PicturesController < ApplicationController
 
 	#edit 
 	def edit 
+
 
 	end 
 

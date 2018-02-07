@@ -12,5 +12,10 @@
   = f.label I18n.t('description')
   = f.text_area :description, class: "form-control"
   <br>
-  = f.submit I18n.t('submit') , class: "btn btn-info" 
- 
+
+  = f.check_box :is_priavte, {}, true, false
+  =f.label I18n.t('private image')
+  <br> <br>
+
+  = f.submit I18n.t('submit') , class: "btn btn-info"
+  
