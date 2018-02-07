@@ -1,5 +1,7 @@
 
 = form_for(@picture, html: {multipart: true}) do |f|
+
+  = f.hidden_field :user_id, value: user.id
   
   = f.label I18n.t('image')
   = f.file_field :image
@@ -13,8 +15,8 @@
   = f.text_area :description, class: "form-control"
   <br>
 
-  = f.check_box :is_priavte, {}, true, false
-  =f.label I18n.t('private image')
+  = f.check_box :is_public
+  =f.label I18n.t('public image')
   <br> <br>
 
   = f.submit I18n.t('submit') , class: "btn btn-info"

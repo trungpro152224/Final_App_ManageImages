@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
 
 def index
-	
+
 	@user = User.all
 end
 
@@ -45,7 +45,7 @@ end
     end
 
     def user_params
-		params.require(:user).permit(:username)
+		params.require(:user).permit(:username, :email, :password)
 	end
 end
 

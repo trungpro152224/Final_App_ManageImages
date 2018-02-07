@@ -7,5 +7,4 @@ class ApplicationController < ActionController::Base
     pictures_path
   end
 
-
 end

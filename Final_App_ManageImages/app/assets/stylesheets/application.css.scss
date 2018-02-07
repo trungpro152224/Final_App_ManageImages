@@ -1,7 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
+.backgroup-image
+{
+     background-image: url("paper.img");
+}
 
 .wrapper_with_padding
 {
@@ -11,19 +14,19 @@
     margin-left: 80px;
     text-align: left;
 
-
 }
 .img{
-    
+
     width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    width:100%;  
 }
 
 
-.padding
-{
+.padding{
+
     margin-top: 100px;
     margin-bottom: 100px;
     margin-right: 150px;
@@ -82,7 +85,6 @@ strong
 h2 
 {
 	color: red;
-
 }
 
 .form-new-album
@@ -108,4 +110,9 @@ h2
 {
     margin-left: 100px;
     margin-right: 100px;
+}
+
+.header-right
+{
+    
 }
