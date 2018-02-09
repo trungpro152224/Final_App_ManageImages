@@ -8,10 +8,11 @@
   %link{:rel => "stylesheet", :href => "path/to/font-awesome/css/font-awesome.min.css"}/
   = csrf_meta_tags
   %br/
-.background-image
-.header-right
+
+.body
   - if user_signed_in?
     %i.glyphicon.glyphicon-camera
+      .nav-bar
     = link_to t('.sign_out'), destroy_user_session_path, method: :delete, class: "navbar-text navbar-right"
     = link_to t('.new_picture'), new_picture_path, class: "navbar-text navbar-right"
     = link_to t('.all_pictures') ,pictures_path, class: "navbar-text navbar-right"
@@ -21,4 +22,7 @@
     = link_to I18n.t('login'), new_user_session_path
   %p.notice= notice
   %p.alert= alert
+.img  
+
+
   = yield

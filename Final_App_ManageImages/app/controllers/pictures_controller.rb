@@ -23,7 +23,7 @@ class PicturesController < ApplicationController
   #create
   def create
     @picture = Picture.new(picture_params)
-
+    
     if @picture.save
     flash[:notice] = "Add picture successful!"
       redirect_to @picture

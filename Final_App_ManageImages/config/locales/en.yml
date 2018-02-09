@@ -63,4 +63,6 @@ en:
       new_picture: "New Picture"
       all_picture: "All picture"
       new_album: "New Album"
-
+      
+  edit: "Edit"
+  back: "Back"

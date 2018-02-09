@@ -6,13 +6,21 @@
 	%p
 	%b Name:
 	= @album.name
-	%p
+	%p 	
+	<br>
 	%b Description:
 	= @album.description
 	%p
-	%b Is private:
-	= @album.is_private
 	<br>
-	= link_to 'Edit', edit_album_path(@album), class: "btn btn-info"
+	%b Is public:
+	= @album.is_public
+	<br>
+	<br>
+	%b Pictures:
 
-	= link_to 'Back', albums_path, class: "btn btn-info"
+	<br>
+	<br>
+	<br>
+	= link_to I18n.t('edit'), edit_album_path(@album), class: "btn btn-info"
+
+	= link_to I18n.t('back'), albums_path, class: "btn btn-info"

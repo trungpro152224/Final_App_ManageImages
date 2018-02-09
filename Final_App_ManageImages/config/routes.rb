@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
-  resources :albums
-  devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get 'welcome/index'
-  root 'welcome#index'
-  get 'welcome/show'
-  resources :pictures
-  resources :users
 
+  get 'welcome/index'
+  root 'welcome#index'	
+
+  devise_for :users
+  devise_scope :user do
+  root to: "devise/sessions#new"
+end
+	resources :users
+
+  resources :albums
+
+  resources :pictures
+ 
 end

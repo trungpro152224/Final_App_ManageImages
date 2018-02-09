@@ -34,7 +34,7 @@ class AlbumsController < ApplicationController
           @albums.pictures.create(image: image)
         }
       end
-
+      
         format.html { redirect_to @album, notice: 'Album was successfully created.' }
         format.json { render :show, status: :created, location: @album }
       else
@@ -76,6 +76,6 @@ class AlbumsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def album_params
-      params.require(:album).permit(:name, :description, :is_public)
+      params.require(:album).permit(:name, :description, :is_public, :image)
     end
 end

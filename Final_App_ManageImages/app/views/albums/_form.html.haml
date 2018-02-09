@@ -1,9 +1,11 @@
 
 
 = form_for(@album, html: {multipart: true}) do |f|
-	= f.label I18n.t('image')
-	= f.file_field :image, class: "btn", type: :file, multiple: true
 
+	= f.label :pictures
+	= file_field_tag "images[]", class: "btn", multiple: true
+
+	= f.hidden_field :user_id, :value => current_user.id
 	= f.label I18n.t('name abums')
 	= f.text_area :name, class: "form-control"
 	<br>

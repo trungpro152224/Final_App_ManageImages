@@ -1,11 +1,8 @@
 
-.img
-  = image_tag("callout_background.jpg", :alt => "rss feed")
-
 .padding
   - if @pictures.present?
     - @pictures.each do |picture|
-
+      .body
       %a{ href: (url_for [picture])}
         = link_to image_tag picture.image.url(:thumb)
         %h4.title= link_to picture.title, picture

@@ -1,12 +1,19 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.backgroup-image
+
+.body
 {
-     background-image: url("paper.img");
+    width: 100%;
+    padding: 1em;
+    color: white;
+    background-color: black ;
+    clear: left;
+    text-align: left;
 }
 
-.wrapper_with_padding
+
+.wrapper-with-padding
 {
 	margin-top: 100px;
     margin-bottom: 100px;
@@ -15,6 +22,7 @@
     text-align: left;
 
 }
+
 .img{
 
     width: 100%;
