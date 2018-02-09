@@ -1,18 +1,18 @@
 
 .detail-album
-	%h1 DETAIL ALBUM
+	%h1 #{I18n.t('detail_album')}
 	%p#notice= notice
 
 	%p
-	%b Name:
+	%b #{I18n.t('name')}
 	= @album.name
 	%p 	
 	<br>
-	%b Description:
+	%b #{I18n.t('description')}
 	= @album.description
 	%p
 	<br>
-	%b Is public:
+	%b #{I18n.t('public')}
 	= @album.is_public
 	<br>
 	<br>

@@ -1,5 +1,5 @@
 .center
-	%h1 EDIT YOUR PICTURE
+	%h1 #{I18n.t('edit_picture')}
 	<br>
 	= render 'form',  user: current_user
 	= link_to I18n.t('cancel'), pictures_path

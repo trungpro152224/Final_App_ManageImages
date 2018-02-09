@@ -23,12 +23,13 @@ class PicturesController < ApplicationController
   #create
   def create
     @picture = Picture.new(picture_params)
-    
+
     if @picture.save
-    flash[:notice] = "Add picture successful!"
+      flash[:notice] = t(:noticed_success_create)
       redirect_to @picture
     else
       render 'new'
+      flash[:notice] = t(:noticed_fail_create)
     end
   end
 
@@ -41,16 +42,18 @@ class PicturesController < ApplicationController
   #update
   def update
     if @picture.update(picture_params)
-      flash[:notice] = "Update picture successful!"
+      flash[:notice] = t(:noticed_success_update)
       redirect_to @picture
     else
       render 'edit'
+      flash[:notice] = t(:noticed_fail_update)
     end 
   end 
   
   # destroy
   def destroy
     @picture.destroy
+    flash[:notice] = t(:noticed_destroy)
     redirect_to pictures_path
   end
 

@@ -5,29 +5,6 @@
 # To use the locales, use `I18n.t`:
 #
 #     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
 
 en:
   hello: "Hello world"
@@ -63,6 +40,45 @@ en:
       new_picture: "New Picture"
       all_picture: "All picture"
       new_album: "New Album"
-      
+
   edit: "Edit"
   back: "Back"
+
+  add_picture: "Add Picture Successful!"
+  noticed: "Successful Action!"
+  noticed_create: "Add Album Successful!"
+  noticed_update: "Update Album Successful!"
+  noticed_destroy: "Destrot Album Successful!"
+
+  noticed_success_create: "Add Picture Successful"
+  noticed_success_update: "Update Picture Successful"
+  noticed_fail_create: "Create Picture Fails"
+
+  noticed_fail_update: "Update Picture Fail"
+  noticed_destroy: "Destroy Picture Successful"
+
+  albums:
+    edit: 
+      edit: "Edit"
+      back: "Back"
+
+  albums:
+    index:
+      show: "Show"
+      edit: "Edit"
+      destroy: "Destroy"
+      new_album: "New Album"
+      cancel: "Cancel"
+
+  albums: 
+    new:
+      back: "Back"
+
+  name: Name
+  desription: Description
+  public: Public Albums
+  listing_album:  LISTING ALBUM
+  new_album: "NEW ALBUM"
+  detail_album: DETAIL ALBUM
+  edit_picture: EDIT YOUR PICTURE
+  add_picture: "ADD A NEW PICTURE"

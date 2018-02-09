@@ -1,4 +1,4 @@
 .wrapper
-	%h1 ADD A NEW PICTURE
+	%h1 #{I18n.t('add_picture')}
 	=render 'form', user: current_user
 	= link_to I18n.t('cancel'), pictures_path

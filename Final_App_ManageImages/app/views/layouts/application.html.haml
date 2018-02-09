@@ -9,10 +9,9 @@
   = csrf_meta_tags
   %br/
 
-.body
+.header   
   - if user_signed_in?
     %i.glyphicon.glyphicon-camera
-      .nav-bar
     = link_to t('.sign_out'), destroy_user_session_path, method: :delete, class: "navbar-text navbar-right"
     = link_to t('.new_picture'), new_picture_path, class: "navbar-text navbar-right"
     = link_to t('.all_pictures') ,pictures_path, class: "navbar-text navbar-right"

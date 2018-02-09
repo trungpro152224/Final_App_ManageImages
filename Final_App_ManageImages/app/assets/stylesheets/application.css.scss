@@ -2,16 +2,23 @@
 @import "bootstrap";
 
 
-.body
+.header
 {
+
     width: 100%;
     padding: 1em;
     color: white;
     background-color: black ;
-    clear: left;
     text-align: left;
 }
 
+.body
+{
+    width: 100%;  
+    height: auto;
+    padding: 10px;
+    background-color: #e6e6e6;
+}
 
 .wrapper-with-padding
 {
@@ -23,8 +30,13 @@
 
 }
 
-.img{
+.wraping-new-cancel
+{
+    text-align: center;
 
+}
+.img{
+    
     width: 100%;
     height: auto;
     margin-left: auto;
@@ -32,21 +44,7 @@
     width:100%;  
 }
 
-
-.padding{
-
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 150px;
-    margin-left: 80px;
-    float: center;
-    width: 40%;
-    margin: auto;
-    text-align: center;
-    border-style: ridge;
-    border-radius: 5px;
-}
-
+    
 .wrapper
 {
 	 text-align: left;

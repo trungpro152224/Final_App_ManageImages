@@ -2,13 +2,14 @@
 .padding
   - if @pictures.present?
     - @pictures.each do |picture|
-      .body
+      
       %a{ href: (url_for [picture])}
+      .body
         = link_to image_tag picture.image.url(:thumb)
         %h4.title= link_to picture.title, picture
         %h5.date= time_ago_in_words(picture.created_at)
   - else
-    %h2 Add a picture
+    %h2 #{I18n.t('add_picture')}
     %button= link_to t('.new_picture'), new_picture_path
 
 .will-page
